@@ -1,0 +1,26 @@
+@use 'helpers' as *;
+
+:root {
+  --color-green: #395852;
+  --color-green-dark: #163A34;
+
+  --color-gray: #E0E6E3;
+  --color-gray-alt: #D0DCD9;
+  --color-gray-alt-2: #E9EDE8;
+
+  --color-white: #ffffff;
+  --color-white-alt: #F6F5F1;
+
+  --color-orange: #FE9F6B;
+
+  --color-teal: #49AC9B;
+
+  --color-indigo: #697DDB;
+
+  --font-family-base: 'Nunito', sans-serif;
+  --font-family-accent: 'Nunito-sans', sans-serif;
+
+  --container-width: #{rem(1192)};
+  --container-padding-x: #{rem(16)};
+  --transition-duration: 0.2s;
+}

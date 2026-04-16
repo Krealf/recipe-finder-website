@@ -1,0 +1,105 @@
+@use "@/styles/helpers" as *;
+
+.menuDesktop {
+  @include mobile {
+    display: none;
+  }
+}
+
+.menuMobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+
+    position: absolute;
+    padding: rem(8);
+    border: rem(1) solid var(--color-gray);
+
+    top: 90%;
+    background-color: white;
+    border-radius: rem(8);
+    width: 95%;
+    left: 50%;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transform: scaleY(0) translateX(-50%);
+    transform-origin: top;
+
+    transition-duration: var(--transition-duration);
+  }
+}
+
+.menuActive {
+  transform: scaleY(1) translateX(-50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  &__nav {
+    flex-direction: column;
+    gap: 0;
+
+    @include mobile-above {
+      font-size: fluid(18, 16);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include mobile-above {
+      display: flex;
+      flex-direction: row;
+      gap: rem(40);
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: rem(12) rem(8);
+    border-radius: rem(8);
+
+    @include mobile-above {
+      padding-bottom: rem(4);
+      position: relative;
+      border-radius: rem(8);
+    }
+
+    &::after {
+      @include mobile-above {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: rem(4);
+        background: transparent;
+        border-radius: rem(4);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+
+    &:hover::after, &.menu__linkActive::after {
+      @include mobile-above {
+        background: var(--color-orange);
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__linkLast {
+    @include mobile {
+      background-color: var(--color-green-dark);
+      text-align: center;
+      color: var(--color-white);
+    }
+  }
+}

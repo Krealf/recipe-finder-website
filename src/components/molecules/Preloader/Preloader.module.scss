@@ -1,0 +1,29 @@
+@use "@/styles/helpers" as *;
+
+.preloader {
+  padding-block: rem(50);
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.spinner {
+  width: rem(60);
+  height: rem(60);
+  border: rem(8) solid var(--color-green-dark);
+  border-top: rem(8) solid var(--color-white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,81 @@
+@use "@/styles/helpers" as *;
+
+.recipes__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(16);
+  padding: rem(8);
+  border: rem(1) solid var(--color-gray);
+  border-radius: rem(10);
+  background-color: var(--color-white);
+  box-shadow: 0 8px 16px -9px rgba(22, 58, 52, 0.16);
+}
+
+.recipe__image {
+  width: 100%;
+  border-radius: rem(10);
+}
+
+.recipe__text {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  padding-inline: rem(8);
+}
+
+.recipe__title {
+  font-size: rem(20);
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.recipe__description {
+  font-family: var(--font-family-accent);
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--color-green);
+}
+
+.recipe__cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline: rem(8);
+  font-family: var(--font-family-accent);
+  font-size: rem(16);
+  line-height: 1.5;
+  gap: rem(8) rem(16);
+}
+
+.recipe__card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: rem(6);
+}
+
+.recipe__icon {
+  display: flex;
+}
+
+.recipe__view {
+  color: var(--color-white);
+  background-color: var(--color-green-dark);
+  font-size: rem(16);
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  padding: rem(12) rem(32);
+  border-radius: rem(30);
+  border: none;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--color-orange);
+  }
+
+  &:focus-visible {
+    outline-color: var(--color-green-dark);
+  }
+}

@@ -1,0 +1,40 @@
+@use "@/styles/helpers" as *;
+
+.header {
+  position: sticky;
+  border-bottom: rem(1) solid var(--color-gray);
+  z-index: 100;
+  top: 0;
+  background-color: var(--color-white-alt);
+
+  &__inner {
+    --container-width: #{rem(1320)};
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(24);
+    position: relative;
+  }
+
+  &__overlay {
+    display: contents;
+  }
+}
+
+.header__logo {
+  border-radius: rem(4);
+  width: fluid(260, 200);
+
+  &:hover > svg path {
+    fill: var(--color-orange);
+
+    &:nth-child(2) {
+      fill: var(--color-green);
+    }
+  }
+}
+
+
+
+

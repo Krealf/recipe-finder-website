@@ -1,0 +1,73 @@
+@use "@/styles/helpers" as *;
+
+.section {
+  padding-block: rem(80);
+}
+
+.section.recipes {
+  padding-top: 0;
+  padding-bottom: rem(96);
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+  align-items: center;
+}
+
+.hero__heading {
+  font-size: fluid(48, 40);
+  font-weight: 800;
+  line-height: 1.2;
+
+  @include mobile-above {
+    text-align: center;
+  }
+}
+
+.hero__description {
+  font-weight: 500;
+  font-family: var(--font-family-accent);
+  line-height: 150%;
+
+  @include mobile-above {
+    max-width: rem(724);
+    text-align: center;
+  }
+}
+
+.recipes__inner {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+}
+
+.recipes__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+    gap: rem(12);
+  }
+}
+
+.recipes__selects {
+  max-width: rem(400);
+  display: flex;
+  gap: rem(16);
+
+  @include mobile {
+    flex-direction: column;
+    max-width: initial;
+    gap: rem(12);
+  }
+}
+
+.recipes__search {
+  @include mobile-above {
+    max-width: rem(320);
+  }
+}

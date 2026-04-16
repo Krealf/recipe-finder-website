@@ -1,0 +1,40 @@
+@use "@/styles/helpers" as *;
+
+.form {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  width: rem(20);
+  height: rem(20);
+  left: rem(17);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input {
+  padding: rem(10) rem(21) rem(10) rem(44);
+  color: var(--color-green-dark);
+  font-size: rem(18);
+  line-height: 1.5;
+  border: rem(1) solid var(--color-gray);
+  border-radius: rem(10);
+  width: 100%;
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}

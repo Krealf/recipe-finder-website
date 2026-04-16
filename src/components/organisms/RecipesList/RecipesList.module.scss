@@ -1,0 +1,11 @@
+@use "@/styles/helpers" as *;
+
+.recipes__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(376), 1fr));
+  gap: rem(32);
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}

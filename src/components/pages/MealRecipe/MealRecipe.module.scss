@@ -1,0 +1,38 @@
+@use "@/styles/helpers" as *;
+
+.recipe {
+  padding-top: rem(48);
+  padding-bottom: rem(64);
+}
+
+.recipe__inner {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+}
+
+.moreRecipes {
+  padding-top: rem(64);
+  padding-bottom: rem(96);
+}
+
+.moreRecipes__inner {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+}
+
+.moreRecipes__title {
+  font-size: rem(32);
+  font-weight: bold;
+}
+
+.moreRecipes__similar {
+  display: flex;
+  flex-direction: row;
+  gap: rem(32);
+
+  @include mobile {
+    flex-direction: column;
+  }
+}

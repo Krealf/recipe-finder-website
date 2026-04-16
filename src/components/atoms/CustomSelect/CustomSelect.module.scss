@@ -1,0 +1,146 @@
+@use "@/styles/helpers" as *;
+
+.select {
+  position: relative;
+  line-height: 1.5;
+  font-size: rem(18);
+  font-weight: 600;
+  border-radius: rem(10);
+}
+
+.select__box {
+  padding: rem(10) rem(16);
+  border: rem(1) solid var(--color-gray);
+  border-radius: rem(10);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(8);
+  background-color: var(--color-white);
+  user-select: none;
+
+  &::after {
+    content: "";
+    background: url("./icons/icon-chevron-down.svg") center / contain no-repeat;
+    width: rem(20);
+    height: rem(20);
+    transform: translateY(5%);
+    transition-duration: var(--transition-duration);
+  }
+
+  &:hover {
+    border-color: var(--color-green-dark);
+  }
+}
+
+.box__isExpanded {
+  &::after {
+    rotate: 180deg;
+  }
+}
+
+.hasCheck {
+  border-color: var(--color-green-dark);
+}
+
+.options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  border: rem(1) solid var(--color-gray);
+  border-radius: rem(8);
+  background-color: var(--color-white);
+  padding: rem(8);
+  z-index: 999;
+
+  visibility: hidden; // Скрывает объект из виду, но для разметки он остаётся
+  opacity: 0; // Прозрачность ставим на ноль
+  transform: scaleY(0); // Ставим трансформацию по Y равную 0
+  transform-origin: 100% 0%; // Точка трансформации на верхнюю точку
+  height: auto;
+
+  transition: all 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+.isExpanded {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.option {
+  cursor: pointer;
+  padding: rem(8);
+  display: flex;
+  gap: rem(8);
+  align-items: center;
+  user-select: none;
+  border-radius: rem(8);
+
+  @include hover(true) {
+    .option__circle {
+      border: rem(2) solid var(--color-gray-alt-2);
+    }
+  }
+
+  &:focus, &.focused {
+    outline: rem(2) solid var(--color-green-dark);
+
+    .option__circle {
+      box-shadow: 0 0 0 rem(4) #e9ede8;
+    }
+  }
+
+  &.checked {
+    position: relative;
+
+    .option__circle {
+      border: rem(2) solid var(--color-green-dark);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: rem(8);
+        height: rem(8);
+        background-color: var(--color-green-dark);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+
+    @include hover(true) {
+      .option__circle {
+        border: rem(2) solid var(--color-green);
+
+        &:before {
+          background-color: var(--color-green);
+        }
+      }
+    }
+  }
+}
+
+.option__circle {
+  width: rem(16);
+  height: rem(16);
+  border: rem(1) solid var(--color-gray-alt);
+  border-radius: 50%;
+  box-shadow: 0 rem(1) rem(2) 0 rgba(22, 58, 52, 0.12);
+  transform: translateY(-10%);
+}
+
+.option__buttonClear {
+  user-select: none;
+  cursor: pointer;
+  padding: rem(2) rem(8);
+  border-radius: rem(8);
+
+  &:focus {
+    outline: rem(2) solid var(--color-green-dark);
+  }
+}
+

@@ -1,0 +1,45 @@
+@use "@/styles/helpers" as *;
+
+.burgerButton {
+  @include square(rem(40));
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: rem(11);
+  background-color: var(--color-gray);
+  border: 0;
+  border-radius: rem(4);
+  color: var(--color-green-dark);
+
+  @include hover(true) {
+    background-color: var(--color-green);
+  }
+}
+
+.burgerButton__line {
+  width: 100%;
+  height: rem(2);
+  background-color: var(--color-green-dark);
+  border-radius: rem(1);
+  transform-origin: center center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burgerButtonActive {
+  .burgerButton__line {
+    &:first-child {
+      rotate: 45deg;
+      translate: 0 rem(8);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      rotate: -45deg;
+      translate: 0 rem(-8);
+    }
+  }
+}

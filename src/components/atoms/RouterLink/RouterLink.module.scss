@@ -1,0 +1,20 @@
+@use "@/styles/helpers" as *;
+
+.RouterLink {
+  padding: rem(12) rem(16);
+  border-radius: rem(10);
+  color: white;
+  background-color: var(--color-green-dark);
+  user-select: none;
+  border: none;
+  line-height: 140%;
+
+  &:hover {
+    background-color: var(--color-orange);
+  }
+
+  &:focus-visible {
+    outline-color: var(--color-green-dark);
+  }
+}
+

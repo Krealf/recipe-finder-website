@@ -1,0 +1,145 @@
+import styles from "./Home.module.scss"
+
+import RouterLink from "@/components/atoms/RouterLink/index.jsx";
+import SimplicitySection
+  from "@/components/organisms/SimplicitySection/index.jsx";
+import ReadyToCookSection
+  from "@/components/organisms/ReadyToCookSection/index.jsx";
+
+const Home = () => {
+  return (<>
+      <section className={`l-section ${styles.hero}`}>
+        <div className={`${styles.hero__inner} container`}>
+          <div className={`${styles.hero__body}`}>
+            <div className={`${styles.hero__text}`}>
+              <h1 className={`${styles.hero__heading}`}>
+                <span className={`orange-text--light`}>Healthy</span> meals, zero fuss
+              </h1>
+              <div className={`${styles.hero__description}`}>
+                <p>Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.</p>
+              </div>
+            </div>
+            <RouterLink
+              to="/recipe-finder-website/recipes"
+              className={`${styles.hero__link}`}
+            >
+              Start exploring
+            </RouterLink>
+          </div>
+          <div className={`${styles.hero__image}`}>
+            <img
+              src="./images/image-home-hero-large.webp"
+              alt="A woman is cutting cucumbers"
+              width="1192"
+              height="530"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+      <section className={`l-section ${styles.advantages || ""}`}>
+        <div className={`${styles.advantages__inner} container`}>
+          <h2 className={`${styles.advantages__heading}`}>
+            What you’ll get
+          </h2>
+          <ul className={`${styles.advantages__list}`}>
+            <li className={`${styles.advantages__item}`}>
+              <div className={`${styles.advantages__icon}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="34"
+                  fill="none"
+                  viewBox="0 0 24 34"
+                >
+                  <path
+                    fill="#FE9F6B"
+                    d="M15.344 5.492c.058.437-.36.766-.798.712-4.09-.504-9.506 2.403-11.194 6.17-.183.41-.692.6-1.037.313-.675-.562-1.256-1.251-1.612-2.05C.336 9.819.22 8.809.847 7.96c.443-.6 1.16-.979 2.08-1.173-.612-2.475.083-4.56 1.759-5.446 1.677-.886 3.795-.285 5.498 1.614.689-.654 1.408-1.036 2.152-1.066 1.055-.044 1.817.621 2.278 1.385.382.631.622 1.405.73 2.218Z"
+                    opacity=".4"
+                  />
+                  <path
+                    fill="#FE9F6B"
+                    d="M8.125 22.995a.822.822 0 0 1-1.05-.24c-1.71-2.354-2.92-4.538-3.167-5.82-.376-1.978-.473-5.266 4.865-8.091 5.34-2.825 8.004-.894 9.425.531.373.375.78.963 1.197 1.711.22.396.06.89-.34 1.102l-3.972 2.101a1.25 1.25 0 0 0 1.17 2.21l3.714-1.965a.818.818 0 0 1 1.154.433 45.413 45.413 0 0 1 1.671 5.68.823.823 0 0 1-.421.906l-2.996 1.585a1.25 1.25 0 1 0 1.17 2.21l1.766-.935c.513-.272 1.14.052 1.192.63.328 3.627-.156 6.686-2.129 7.62-2.824 1.659-7.719-2.146-11.617-6.563a.82.82 0 0 1 .24-1.266l2.712-1.435a1.25 1.25 0 0 0-1.169-2.21l-3.415 1.806Z"
+                  />
+                </svg>
+              </div>
+              <div className={`${styles.advantages__text}`}>
+                <h3 className={`${styles.advantages__title}`}>Whole-food recipes</h3>
+                <div className={`${styles.advantages__description}`}>
+                  <p>Each dish uses everyday, unprocessed ingredients.</p>
+                </div>
+              </div>
+            </li>
+            <li className={`${styles.advantages__item}`}>
+              <div className={`${styles.advantages__icon}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="42"
+                  fill="none"
+                  viewBox="0 0 40 42"
+                  className="colorable-icon"
+                >
+                  <path
+                    fill="#49AC9B"
+                    d="M22.677 8.163v8.815l-5.355 9.045H9.027a2.483 2.483 0 0 1-2.22-1.36 2.479 2.479 0 0 1 .205-2.595L18.17 6.698a2.45 2.45 0 0 1 2.785-.905 2.45 2.45 0 0 1 1.722 2.37Z"
+                  />
+                  <path
+                    fill="#49AC9B"
+                    d="M17.293 34.832v-8.815l5.355-9.045h8.295c.941 0 1.791.522 2.22 1.36.427.838.35 1.833-.205 2.595l-11.159 15.37a2.45 2.45 0 0 1-2.784.905 2.45 2.45 0 0 1-1.722-2.37Z"
+                    opacity=".4"
+                  />
+                </svg>
+              </div>
+              <div className={`${styles.advantages__text}`}>
+                <h3 className={`${styles.advantages__title}`}>Minimum fuss</h3>
+                <div className={`${styles.advantages__description}`}>
+                  <p>All recipes are designed to make eating healthy quick and easy.</p>
+                </div>
+              </div>
+            </li>
+            <li className={`${styles.advantages__item}`}>
+              <div className={`${styles.advantages__icon}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="none"
+                  viewBox="0 0 40 40"
+                >
+                  <path
+                    fill="#697DDB"
+                    fillRule="evenodd"
+                    d="M9.003 26.118H4.834a1.25 1.25 0 0 0 0 2.5h4.169a1.25 1.25 0 0 0 0-2.5ZM9.623 10.185H4.834a1.25 1.25 0 0 0 0 2.5h4.789a1.25 1.25 0 0 0 0-2.5ZM4.834 20.619h2.38a1.25 1.25 0 0 0 0-2.5h-2.38a1.25 1.25 0 0 0 0 2.5ZM36.03 30.217l-2.602-2.595a1.311 1.311 0 0 0-1.852 1.858l2.602 2.594a1.311 1.311 0 1 0 1.852-1.857Z"
+                    clipRule="evenodd"
+                  />
+                  <path
+                    fill="#697DDB"
+                    fillRule="evenodd"
+                    d="M23.1 7.542c-6.097 0-11.037 4.944-11.037 11.042 0 6.097 4.94 11.04 11.037 11.04s11.038-4.943 11.038-11.04c0-6.098-4.941-11.042-11.038-11.042Z"
+                    clipRule="evenodd"
+                    opacity=".4"
+                  />
+                </svg>
+              </div>
+              <div className={`${styles.advantages__text}`}>
+                <h3 className={`${styles.advantages__title}`}>Search in seconds</h3>
+                <div className={`${styles.advantages__description}`}>
+                  <p>Filter by name or ingredient and jump straight to the recipe you need.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <SimplicitySection
+        title="Built for real life"
+        paragraphs={["Cooking shouldn’t be complicated. These recipes come in under <span class='orange-text'>30 minutes</span> of active time, fit busy schedules, and taste good enough to repeat.", "Whether you’re new to the kitchen or just need fresh ideas, we’ve got you covered."]}
+        srcImage="./images/image-home-real-life-large.webp"
+      />
+      <ReadyToCookSection/>
+    </>
+  )
+}
+
+export default Home

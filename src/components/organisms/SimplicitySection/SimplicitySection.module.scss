@@ -1,0 +1,59 @@
+@use "@/styles/helpers" as *;
+
+.simplicity__inner {
+  display: grid;
+  grid-template-columns: 42.7% auto;
+  gap: fluid(48, 32);
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.simplicity__body {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  color: var(--color-green);
+
+  & > p {
+    font-family: var(--font-family-accent);
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
+
+.simplicity__subtitle {
+  margin: 0;
+}
+
+.simplicity__title {
+  font-weight: 800;
+  font-size: fluid(48, 40);
+
+  @include mobile {
+    line-height: 120%;
+  }
+}
+
+.simplicity__text {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: rem(20);
+  font-family: var(--font-family-accent);
+}
+
+.simplicity__list {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+  font-size: rem(20);
+  list-style: disc;
+  padding-left: rem(30);
+}
+
+.simplicity__image {
+  border-radius: rem(8);
+  width: 100%;
+}

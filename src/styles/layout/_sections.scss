@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+.l-section {
+  padding-block: rem(80);
+}
+
+.l-section:first-child {
+  padding-top: rem(80);
+}
+
+.l-section:last-child {
+  padding-bottom: 0;
+}
