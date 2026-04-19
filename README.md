@@ -30,9 +30,9 @@ Users should be able to:
 
 <img alt="FireShot Capture 001 - Recipe Finder -  krealf github io" src="https://github.com/user-attachments/assets/4b461959-4296-4f3c-93da-f6f08764e1d5" />
 
-<img alt="FireShot Capture 003 - Recipe Finder -  krealf github io" src="https://github.com/user-attachments/assets/c37958b0-2503-434e-a39a-dcbf97541e75" />
-
 <img alt="FireShot Capture 002 - Recipe Finder -  localhost" src="https://github.com/user-attachments/assets/358a6f3d-bc58-45c7-8557-bdce6cdfc8d0" />
+
+<img alt="FireShot Capture 003 - Recipe Finder -  krealf github io" src="https://github.com/user-attachments/assets/c37958b0-2503-434e-a39a-dcbf97541e75" />
 
 <img alt="FireShot Capture 004 - Recipe Finder -  krealf github io" src="https://github.com/user-attachments/assets/7a4fc317-bc12-4866-bb0c-ddd0443e5f9f" />
 
