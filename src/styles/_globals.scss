@@ -1,5 +1,6 @@
 @use "helpers" as *;
 
+//noinspection CssNoGenericFontName
 body {
   @include fluid-text(20, 16);
 

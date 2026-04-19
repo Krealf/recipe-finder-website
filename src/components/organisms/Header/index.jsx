@@ -1,46 +1,35 @@
-import styles from "./Header.module.scss"
+import styles from "./Header.module.scss";
 
 import RouterLink from "@/components/atoms/RouterLink/index.jsx";
 import BurgerButton from "@/components/atoms/BurgerButton/index.jsx";
-import Menu from "@/components/molecules/Menu"
-import {useClickOutside} from "@/hooks/useClickOutside.js";
+import Menu from "@/components/molecules/Menu";
+import { useClickOutside } from "@/hooks/useClickOutside.js";
 
-import Logo from "@/assets/images/logo.svg"
-
-import {Link, NavLink} from "react-router"
-import {useState, useRef} from "react";
-
+import { Link } from "react-router";
+import { useState, useRef } from "react";
 
 const Header = (props) => {
-  const {
-    className = "",
-  } = props;
+  const { className = "" } = props;
 
-  const [menuActive, setMenuActive] = useState(false)
-  const menuRef = useRef(null)
-  useClickOutside(menuRef, () => setMenuActive(false))
+  const [menuActive, setMenuActive] = useState(false);
+  const menuRef = useRef(null);
+  useClickOutside(menuRef, () => setMenuActive(false));
 
   const items = [
-    {to: "/recipe-finder-website/", label: "Home", end: true},
-    {to: "/recipe-finder-website/about", label: "About"},
-    {to: "/recipe-finder-website/recipes", label: "Recipes"},
+    { to: "/recipe-finder-website/", label: "Home", end: true },
+    { to: "/recipe-finder-website/about", label: "About" },
+    { to: "/recipe-finder-website/recipes", label: "Recipes" },
     {
       to: "/recipe-finder-website/recipes",
       label: "Browse recipes",
       visibleMobile: true,
     },
-  ]
+  ];
 
   return (
     <header className={`${styles.header} ${className}`}>
-      <div
-        className={`${styles.header__inner} container`}
-        ref={menuRef}
-      >
-        <Link
-          to="/recipe-finder-website/"
-          className={`${styles.header__logo}`}
-        >
+      <div className={`${styles.header__inner} container`} ref={menuRef}>
+        <Link to="/recipe-finder-website/" className={`${styles.header__logo}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="260"
@@ -50,15 +39,15 @@ const Header = (props) => {
           >
             <path
               fill="#163A34"
-              fillRule="evenodd"
+              
               d="M8.344 7.22c-.055 1.518.231 4.206 4.253 7.385 3.39 2.679 6.385 5.649 7.281 9.425.797 3.352.292 13.044-5.892 9.548-3.023-1.709-7.157-4.946-6.902-9.762 0 0 .129-1.237-.453-1.287-.58-.05-1.975 6.433 3.988 11.568 5.962 5.134 15.494 4.198 19.324 1.178 0 0 .76-.67.997-.574.106.042-.08.72-1.04 1.432C11.412 49.84-12.194 24.033 7.34 6.681c1.422-1.264 1.05-.733 1.004.539Z"
-              clipRule="evenodd"
+              
             />
             <path
               fill="#FE9F6B"
-              fillRule="evenodd"
+              
               d="M22.673 1.433c.224 1.722.185 4.787-4.042 8.61-1.055.954-2.069 1.936-2.989 2.958-.072.094-.772 1.074.258 2.253.973 1.115 7.81 7.35 6.008 13.127-.504 1.616.317.833.782.353 2.086-2.152 3.698-5.016 3.18-8.525 0 0-.276-1.398.377-1.486.654-.086 2.928 7.2-3.292 13.345a14.642 14.642 0 0 1-2.116 1.725s-.29.35.003.627c.062.059.512.196 1.086-.062C37.826 27.21 36.214 10.446 23.755.768c-1.75-1.358-1.27-.776-1.082.665Z"
-              clipRule="evenodd"
+              
             />
             <path
               fill="#163A34"
@@ -66,24 +55,20 @@ const Header = (props) => {
             />
           </svg>
         </Link>
-        <Menu
-          items={items}
-          isActive={menuActive}
-          onClose={setMenuActive}
-        />
+        <Menu items={items} isActive={menuActive} onClose={setMenuActive} />
         <RouterLink
           to="/recipe-finder-website/recipes"
-          className={`${styles.header__link || ""} hidden-mobile`}
+          className={`hidden-mobile`}
         >
           Browse recipes
         </RouterLink>
         <BurgerButton
           isActive={menuActive}
-          onClick={() => setMenuActive(prev => !prev)}
+          onClick={() => setMenuActive((prev) => !prev)}
         />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

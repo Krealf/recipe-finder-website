@@ -42,7 +42,7 @@ const Menu = (props) => {
           <ul className={`${styles.menu__list}`}>
             {items.map((item, index) => (<li
                 key={index}
-                className={`${styles.menu__item || ""}`}
+                className={``}
               >
                 {renderItem(item)}
               </li>
@@ -60,7 +60,7 @@ const Menu = (props) => {
                 onClick={() => {
                   onClose(false)}}
                 key={index}
-                className={`${styles.menu__item || ""}`}
+                className={``}
               >
                 {renderItem(item)}
               </li>

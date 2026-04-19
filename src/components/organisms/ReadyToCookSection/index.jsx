@@ -1,9 +1,9 @@
 import styles from "./ReadyToCookSection.module.scss"
 import RouterLink from "@/components/atoms/RouterLink/index.jsx";
 
-const ReadyToCookSection = (props) => {
+const ReadyToCookSection = () => {
   return (
-    <section className={`${styles.action || ""}`}>
+    <section className={``}>
       <div className={`container`}>
         <div className={`${styles.action__inner}`}>
           <div className={`${styles.action__text}`}>
@@ -14,7 +14,7 @@ const ReadyToCookSection = (props) => {
           </div>
           <RouterLink
             to="/recipe-finder-website/recipes"
-            className={`${styles.hero__link}`}
+            className={``}
           >
             Browse recipes
           </RouterLink>

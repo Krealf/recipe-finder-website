@@ -21,7 +21,7 @@
 
   &::after {
     content: "";
-    background: url("./icons/icon-chevron-down.svg") center / contain no-repeat;
+    background: url("@/assets/icons/icon-chevron-down.svg") center / contain no-repeat;
     width: rem(20);
     height: rem(20);
     transform: translateY(5%);
@@ -57,7 +57,7 @@
   visibility: hidden; // Скрывает объект из виду, но для разметки он остаётся
   opacity: 0; // Прозрачность ставим на ноль
   transform: scaleY(0); // Ставим трансформацию по Y равную 0
-  transform-origin: 100% 0%; // Точка трансформации на верхнюю точку
+  transform-origin: 100% 0; // Точка трансформации на верхнюю точку
   height: auto;
 
   transition: all 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);

@@ -32,7 +32,7 @@ const SimplicitySection = (props) => {
           ))}
           {listItems?.length > 0 && <ul className={`${styles.simplicity__list}`}>
             {listItems.map((item, index) => (
-              <li key={index} className={`${styles.simplicity__item}`}>
+              <li key={index} className={``}>
                 <p>{item}</p>
               </li>
             ))}
